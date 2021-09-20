@@ -150,7 +150,7 @@ DEPENDENCIES
   graphql
   puma (~> 5.0)
   rails (~> 7.0.0.alpha2)
-  sqlite3 (~> 1.4)
+  sqlite3
   tzinfo-data
 
 RUBY VERSION

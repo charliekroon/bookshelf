@@ -11,7 +11,16 @@ module Types
     field :test_field, String, null: false,
       description: "An example field added by the generator"
     def test_field
+      Rails.logger.info context [:time]
       "Hello World!"
     end
+  end
+
+  field :author, Types::AuthorType, null: true, description: "One Author" do
+    argument :id, ID, required: true
+  end
+
+  def author(id:)
+    Author.where(id: id).first
   end
 end
